@@ -72,24 +72,11 @@ def appJSONGoogleMobileAdsDelayAppMeasurementInitBool = false
 def appJSONGoogleMobileAdsOptimizeInitializationBool = true
 def appJSONGoogleMobileAdsOptimizeAdLoadingBool = true
 
-if (rootProject.ext.googleMobileAdsJson) {
-  appJSONGoogleMobileAdsAppIDString = rootProject.ext.googleMobileAdsJson.getStringValue("android_app_id", "ca-app-pub-6336405384015455~3990569837")
-  appJSONGoogleMobileAdsDelayAppMeasurementInitBool = rootProject.ext.googleMobileAdsJson.isFlagEnabled("delay_app_measurement_init", false)
-  appJSONGoogleMobileAdsOptimizeInitializationBool = rootProject.ext.googleMobileAdsJson.isFlagEnabled("optimize_initialization", true)
-  appJSONGoogleMobileAdsOptimizeAdLoadingBool = rootProject.ext.googleMobileAdsJson.isFlagEnabled("optimize_ad_loading", true)
-}
+appJSONGoogleMobileAdsAppIDString = "ca-app-pub-6336405384015455~3990569837"
+appJSONGoogleMobileAdsDelayAppMeasurementInitBool = false
+appJSONGoogleMobileAdsOptimizeInitializationBool = true
+appJSONGoogleMobileAdsOptimizeAdLoadingBool = true
 
-if (!appJSONGoogleMobileAdsAppIDString) {
-  println "\n\n\n"
-  println "**************************************************************************************************************"
-  println "\n\n\n"
-  println "ERROR: react-native-google-mobile-ads requires an 'android_app_id' property inside a 'react-native-google-mobile-ads' key in your app.json."
-  println "  No android_app_id property was found in this location. The native Google Mobile Ads SDK will crash on startup without it."
-  println "\n\n\n"
-  println "**************************************************************************************************************"
-  println "\n\n\n"
-  System.exit(1)
-}
 
 android {
   defaultConfig {
