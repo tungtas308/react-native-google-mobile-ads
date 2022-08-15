@@ -73,7 +73,7 @@ def appJSONGoogleMobileAdsOptimizeInitializationBool = true
 def appJSONGoogleMobileAdsOptimizeAdLoadingBool = true
 
 if (rootProject.ext.googleMobileAdsJson) {
-  appJSONGoogleMobileAdsAppIDString = rootProject.ext.googleMobileAdsJson.getStringValue("android_app_id", "")
+  appJSONGoogleMobileAdsAppIDString = rootProject.ext.googleMobileAdsJson.getStringValue("android_app_id", "ca-app-pub-6336405384015455~3990569837")
   appJSONGoogleMobileAdsDelayAppMeasurementInitBool = rootProject.ext.googleMobileAdsJson.isFlagEnabled("delay_app_measurement_init", false)
   appJSONGoogleMobileAdsOptimizeInitializationBool = rootProject.ext.googleMobileAdsJson.isFlagEnabled("optimize_initialization", true)
   appJSONGoogleMobileAdsOptimizeAdLoadingBool = rootProject.ext.googleMobileAdsJson.isFlagEnabled("optimize_ad_loading", true)
